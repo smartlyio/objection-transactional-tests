@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc --project tsconfig.json",
+    "clean": "rm -r dist",
     "prepublishOnly": "npm run clean; npm run build",
     "test:jest": "jest",
     "test:mocha": "mocha -r ts-node/register tests/mocha.ts",
