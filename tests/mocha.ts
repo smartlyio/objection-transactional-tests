@@ -2,7 +2,7 @@ import * as Knex from "knex";
 
 import * as assert from "assert";
 import { Model } from "objection";
-import { testPerTransaction } from "../index";
+import { transactionPerTest } from "../index";
 import { Item, createTable, databaseConfig } from "./common";
 
 const knex: Knex = Knex(databaseConfig);
@@ -10,7 +10,7 @@ Model.knex(knex);
 
 before(async () => await createTable(knex));
 
-testPerTransaction();
+transactionPerTest();
 
 describe("testPerTransaction", () => {
   it("can access models during test", async () => {

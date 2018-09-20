@@ -1,6 +1,6 @@
 import { transaction, Model, Transaction } from "objection";
 
-export const testPerTransaction = () => {
+export const transactionPerTest = () => {
   let trx: Transaction;
   const knex = Model.knex();
 

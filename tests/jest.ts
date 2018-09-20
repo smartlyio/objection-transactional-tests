@@ -3,14 +3,14 @@ import Knex from "knex";
 import { Item, createTable, databaseConfig } from "./common";
 
 import { Model } from "objection";
-import { testPerTransaction } from "../index";
+import { transactionPerTest } from "../index";
 
 const knex: Knex = Knex(databaseConfig);
 Model.knex(knex);
 
 beforeAll(async () => await createTable(knex));
 
-testPerTransaction();
+transactionPerTest();
 
 describe("testPerTransaction", () => {
   it("can access models during test", async () => {
