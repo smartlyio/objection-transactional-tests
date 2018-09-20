@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "target": "es2017",
+    "lib": ["es2015", "es6", "es2017", "esnext.asynciterable"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "declaration": true,
+    "outDir": "./dist",
+    "strict": false
+  },
+  "files": ["index.ts"]
+}

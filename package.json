@@ -1,0 +1,49 @@
+{
+  "name": "objection-transactional-tests",
+  "version": "0.0.1",
+  "description": "Wrap Jest or Mocha tests in Objection transactions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "prepublishOnly": "npm run clean; npm run build",
+    "test:jest": "jest",
+    "test:mocha": "mocha -r ts-node/register tests/mocha.ts",
+    "test": "npm run test:jest && npm run test:mocha"
+  },
+  "keywords": [
+    "objection",
+    "objection.js",
+    "jest",
+    "transaction"
+  ],
+  "author": "Ville Lautanala <lautis@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mocha": "^5.2.5",
+    "jest": "^23.6.0",
+    "mocha": "^5.2.0",
+    "ts-jest": "^23.10.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testMatch": [
+      "**/tests/*jest.+(ts|tsx|js)"
+    ]
+  },
+  "dependencies": {}
+}
