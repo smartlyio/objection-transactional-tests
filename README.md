@@ -1,6 +1,6 @@
 # Objection transactional tests
 
-Run tests in Jest or Mocha in Objection transactions. This starts a new transaction at the beginning of each tests and does a rollback at the end of it, reverting the database to the state it was in before  the test.
+Run tests in [Jest](https://jestjs.io) or [Mocha](https://mochajs.org) in [Objection.js](http://vincit.github.io/objection.js/) transactions. This starts a new transaction at the beginning of each tests and does a rollback at the end of it, reverting the database to the state it was in before  the test.
 
 ## Usage
 
