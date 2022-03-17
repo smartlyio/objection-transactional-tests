@@ -24,16 +24,16 @@
     "@types/knex": "^0.14.24",
     "@types/mocha": "^5.2.5",
     "jest": "^23.6.0",
-    "knex": "^0.14.6",
+    "knex": "^1.0.0",
     "mocha": "^5.2.0",
-    "objection": "^1.0.0",
-    "sqlite3": "^4.0.2",
+    "objection": "^3.0.0",
+    "@vscode/sqlite3": "^5.0.0",
     "ts-jest": "^23.10.0",
     "ts-node": "^7.0.1",
     "typescript": "^3.0.3"
   },
   "peerDependencies": {
-    "objection": "^1.0.0"
+    "objection": "^1.0.0 || ^2.0.0 || ^3.0.0"
   },
   "jest": {
     "globals": {
@@ -52,6 +52,5 @@
     "testMatch": [
       "**/tests/*jest.+(ts|tsx|js)"
     ]
-  },
-  "dependencies": {}
+  }
 }
