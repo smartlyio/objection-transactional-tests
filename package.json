@@ -21,7 +21,6 @@
   "author": "Ville Lautanala <lautis@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "@types/knex": "^0.14.24",
     "@types/mocha": "^5.2.5",
     "jest": "^23.6.0",
     "knex": "^1.0.0",
