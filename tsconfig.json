@@ -7,7 +7,8 @@
     "moduleResolution": "node",
     "declaration": true,
     "outDir": "./dist",
-    "strict": false
+    "strict": false,
+    "esModuleInterop": true
   },
   "files": ["index.ts"]
 }

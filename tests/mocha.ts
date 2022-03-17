@@ -1,4 +1,4 @@
-import * as Knex from "knex";
+import Knex from "knex";
 
 import * as assert from "assert";
 import { Model } from "objection";
