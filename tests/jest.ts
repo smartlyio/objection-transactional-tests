@@ -1,14 +1,14 @@
-import Knex from "knex";
+import { Knex, knex } from "knex";
 
 import { Item, createTable, databaseConfig } from "./common";
 
 import { Model } from "objection";
 import { transactionPerTest } from "../index";
 
-const knex: Knex = Knex(databaseConfig);
-Model.knex(knex);
+const connection: Knex = knex(databaseConfig);
+Model.knex(connection);
 
-beforeAll(async () => await createTable(knex));
+beforeAll(async () => await createTable(connection));
 
 transactionPerTest();
 
@@ -30,4 +30,4 @@ describe("testPerTransaction", () => {
   }, 1000);
 });
 
-afterAll(async () => await knex.destroy());
+afterAll(async () => await connection.destroy());
