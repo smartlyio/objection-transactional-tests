@@ -1,4 +1,5 @@
 import { Knex, knex } from 'knex';
+import { before, after, describe, it } from 'mocha';
 
 import * as assert from "assert";
 import { Model } from "objection";
@@ -16,7 +17,7 @@ describe("testPerTransaction", () => {
   it("can access models during test", async () => {
     await Item.query().insert({});
     const count = await Item.query().count();
-    assert.equal(count[0]["count(*)"], 1);
+    assert.equal((count[0] as any)["count(*)"], 1);
   });
 
   it("rolls back transaction after tests", async () => {
@@ -25,7 +26,7 @@ describe("testPerTransaction", () => {
 
   after(async () => {
     const count = await Item.query().count();
-    assert.equal(count[0]["count(*)"], 0);
+    assert.equal((count[0] as any)["count(*)"], 0);
   });
 });
 

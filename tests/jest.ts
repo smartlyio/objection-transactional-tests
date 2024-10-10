@@ -23,10 +23,9 @@ describe("testPerTransaction", () => {
     await Item.query().insert({});
   });
 
-  afterAll(async done => {
+  afterAll(async () => {
     const count = await Item.query().count();
     expect(count).toEqual([{ "count(*)": 0 }]);
-    done();
   }, 1000);
 });
 
