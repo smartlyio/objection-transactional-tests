@@ -27,7 +27,7 @@ importers:
         specifier: ^3.1.5
         version: 3.1.5(knex@3.2.10(sqlite3@6.0.1))
       sqlite3:
-        specifier: 6.0.1
+        specifier: ^6.0.1
         version: 6.0.1
       ts-jest:
         specifier: ^29.4.11
@@ -3616,7 +3616,7 @@ snapshots:
 
   node-abi@3.68.0:
     dependencies:
-      semver: 7.6.3
+      semver: 7.8.1
 
   node-addon-api@8.8.0: {}
 
@@ -3627,7 +3627,7 @@ snapshots:
       graceful-fs: 4.2.11
       nopt: 9.0.0
       proc-log: 6.1.0
-      semver: 7.6.3
+      semver: 7.8.1
       tar: 7.5.15
       tinyglobby: 0.2.16
       undici: 6.26.0
