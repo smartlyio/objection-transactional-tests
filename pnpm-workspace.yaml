@@ -1,0 +1,16 @@
+# Supply chain hardening (see https://pnpm.io/settings)
+engineStrict: true
+
+# Delay new publishes: 4320 min = 3 days. Internal @smartly/* may install immediately.
+minimumReleaseAge: 4320
+minimumReleaseAgeExclude:
+  - "@smartly/*"
+
+# Install/postinstall scripts run only for explicitly allowlisted packages.
+strictDepBuilds: true
+allowBuilds:
+  sqlite3: true
+  unrs-resolver: false
+
+# Transitive deps must resolve from the registry, not git/tarball URLs.
+blockExoticSubdeps: true
